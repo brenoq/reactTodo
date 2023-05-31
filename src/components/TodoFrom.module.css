@@ -1,0 +1,47 @@
+.content {
+  margin: -2.7rem auto;
+}
+
+.todoForm {
+  margin: 0 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.todoForm input {
+  width: 63.8rem;
+  height: 5.4rem;
+
+  padding: 1.6rem;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  color: var(--gray-300);
+}
+
+.todoForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  width: 9rem;
+  height: 5.2rem;
+
+  background: var(--blue-dark);
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-100);
+}
