@@ -42,6 +42,11 @@
 
   font-weight: 700;
   font-size: 14px;
-  font-weight: 700;
   color: var(--gray-100);
+
+  transition: 0.3s;
+}
+
+.todoForm button:hover {
+  background: var(--blue);
 }
