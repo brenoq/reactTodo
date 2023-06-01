@@ -1,0 +1,96 @@
+.todo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.2rem;
+
+  width: 73.6rem;
+  height: 7.2rem;
+  padding: 1.6rem;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.todo input {
+  appearance: none;
+  
+  width: 2.4rem;
+  height: 2.4rem;
+
+  outline: none;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+
+  transition: 0.3s;
+
+  position: relative;
+}
+
+.todo input:hover {
+  border: 2px solid var(--blue-dark);
+  cursor: pointer;
+}
+
+.todo input:checked {
+  border-color: var(--purple);
+  background-color: var(--purple);
+
+  transition: 0.3s;
+}
+
+.todo input:checked:hover {
+  border-color: var(--purple-dark);
+  background-color: var(--purple-dark);
+}
+
+.todo input:checked::before {
+  position: absolute;
+
+  top: 0.1rem;
+  left: 0.1rem;
+
+  content: '\2713';
+  font-size: 2.2rem;
+
+  color: var(--gray-100);
+}
+
+.completed {
+  width: 632px;
+  height: 40px;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 140%;
+
+  color: var(--gray-300);
+  text-decoration-line: line-through;
+}
+
+.uncompleted {
+  width: 632px;
+  height: 40px;
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 140%;
+
+  color: var(--gray-100);
+}
+
+.todo button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.todo button:hover {
+  color: var(--danger);
+}

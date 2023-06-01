@@ -1,3 +1,5 @@
+import { Todo } from './Todo'
+
 import styles from './TodoList.module.css'
 
 import clipboard from '../assets/clipboard.svg'
@@ -17,6 +19,7 @@ export function TodoList() {
       </header>
 
       <main className={styles.main}>
+        <Todo />
         <img src={clipboard} alt="imagem prancheta" />
         <p>Você ainda não tem tarefas cadastradas</p>
         <p>Crie tarefas e organize seus itens a fazer</p>
