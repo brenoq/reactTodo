@@ -1,13 +1,29 @@
 import { Trash } from 'phosphor-react'
 import styles from './Todo.module.css'
 
-export function Todo() {
+interface todoProps {
+  id: number;
+  content: string;
+  isCompleted: boolean;
+  onToggleComplete: (id: number) => void;
+  onDeleteTask: (id: number) => void;
+}
+
+export function Todo({ id, content, isCompleted, onToggleComplete, onDeleteTask }: todoProps ) {
+  function handleTogleComplete() {
+    onToggleComplete(id)
+  }
+
+ function handleDeleteComment() {
+  onDeleteTask(id)
+ }
+
   return(
     <div className={styles.todo}>
-      <input type="checkbox" />
-      <p className={styles.completed}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+      <input onChange={handleTogleComplete} type="checkbox" defaultChecked={isCompleted}/>
+      <p className={isCompleted ? styles.completed : styles.uncompleted}>{content}</p>
       <button>
-        <Trash size={24}/>
+        <Trash onClick={handleDeleteComment} className={styles.deleteImg} size={26}/>
       </button>
     </div>
   )

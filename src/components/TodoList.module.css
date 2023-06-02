@@ -28,10 +28,12 @@
 }
 
 .tasksCreated span {
-  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  width: 25px;
   height: 19px;
+  padding: 2px 8px;
 
   background: var(--gray-400);
   border-radius: 999px;
@@ -51,10 +53,12 @@
 }
 
 .tasksCompleted span {
-  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  width: 25px;
   height: 19px;
+  padding: 2px 8px;
 
   background: var(--gray-400);
   border-radius: 999px;
@@ -64,13 +68,11 @@
 
 .main {
   width: 100%;
+  min-height: 24.4rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  padding: 64px 24px;
 
   border-top: 1px solid #333333;
   border-radius: 8px;
@@ -78,6 +80,7 @@
 
 .main img {
   height: 5.6rem;
+  margin-top: 6.4rem;
   margin-bottom: 1.6rem;
 }
 

@@ -1,12 +1,13 @@
 .todo {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1.2rem;
 
   width: 73.6rem;
   height: 7.2rem;
   padding: 1.6rem;
+  margin-bottom: 1.2rem;
 
   background: var(--gray-500);
 
@@ -61,7 +62,6 @@
 
 .completed {
   width: 632px;
-  height: 40px;
 
   font-weight: 400;
   font-size: 1.4rem;
@@ -73,7 +73,6 @@
 
 .uncompleted {
   width: 632px;
-  height: 40px;
 
   font-weight: 400;
   font-size: 1.4rem;
@@ -84,13 +83,25 @@
 
 .todo button {
   background: transparent;
-  border: 0;
   color: var(--gray-300);
+
+  border: 0;
   cursor: pointer;
+
   line-height: 0;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .todo button:hover {
   color: var(--danger);
+  background: var(--gray-400);
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 4px;
+}
+
+.deleteImg {
+  padding: 0.5rem;
 }
