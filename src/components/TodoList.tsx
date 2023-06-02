@@ -1,11 +1,13 @@
 import { Todo } from './Todo'
+import {v4 as uuidv4} from 'uuid';
 
 import clipboard from '../assets/clipboard.svg'
 import styles from './TodoList.module.css'
 import { useState } from 'react';
+import { TodoForm } from './TodoForm';
 
 export interface todoType {
-  id: number;
+  id: string;
   content: string;
   isCompleted: boolean;
 }
@@ -14,18 +16,18 @@ export interface todoType {
 export function TodoList() {
   const [todos, setTodos] = useState([
     {
-      id: 1,
+      id: uuidv4(),
       content: 'Estudar TypeScript',
       isCompleted: true,
     },
     {
-      id: 2,
+      id: uuidv4(),
       content: 'Tirar o sistema do ar',
       isCompleted: false,
     }
   ])
 
-  function toggleComplete(taskId: number) {
+  function toggleComplete(taskId: string) {
     const newTodos = todos.map((todo) => {
       if (todo.id === taskId) {
         return {
@@ -38,9 +40,17 @@ export function TodoList() {
     setTodos(newTodos);
   }
   
-  function deleteTask(taskId: number) {
+  function deleteTask(taskId: string) {
     const newTodos = todos.filter((todo) => todo.id !== taskId);
     setTodos(newTodos);
+  }
+
+  function createTask(contentTask: string) {
+    setTodos([...todos, {
+      id: uuidv4(),
+      content: contentTask,
+      isCompleted: false,
+    }])
   }
 
   function completedTasks() {
@@ -49,6 +59,9 @@ export function TodoList() {
 
   return(
     <div className={styles.content}>
+      <div className='styles.form' >
+        <TodoForm onCreateTask={createTask}/>
+      </div>
       <header className={styles.header}>
         <div className={styles.tasksCreated}>
           <p>Tarefas criadas</p>

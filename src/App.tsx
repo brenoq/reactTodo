@@ -1,5 +1,4 @@
 import { Header } from './components/Header'
-import { TodoForm } from './components/TodoForm'
 import { TodoList } from './components/TodoList'
 
 import styles from './App.module.css'
@@ -13,7 +12,6 @@ function App() {
       <Header />
 
       <div className={styles.wrapper}>
-        <TodoForm />
         <TodoList />
       </div>
     </div>

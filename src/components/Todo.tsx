@@ -2,11 +2,11 @@ import { Trash } from 'phosphor-react'
 import styles from './Todo.module.css'
 
 interface todoProps {
-  id: number;
+  id: string;
   content: string;
   isCompleted: boolean;
-  onToggleComplete: (id: number) => void;
-  onDeleteTask: (id: number) => void;
+  onToggleComplete: (id: string) => void;
+  onDeleteTask: (id: string) => void;
 }
 
 export function Todo({ id, content, isCompleted, onToggleComplete, onDeleteTask }: todoProps ) {
