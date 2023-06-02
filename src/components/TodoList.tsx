@@ -17,14 +17,9 @@ export function TodoList() {
   const [todos, setTodos] = useState([
     {
       id: uuidv4(),
-      content: 'Estudar TypeScript',
+      content: 'Tarefa exemplo. Apague para começar!',
       isCompleted: true,
     },
-    {
-      id: uuidv4(),
-      content: 'Tirar o sistema do ar',
-      isCompleted: false,
-    }
   ])
 
   function toggleComplete(taskId: string) {
