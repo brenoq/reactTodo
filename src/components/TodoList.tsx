@@ -54,9 +54,10 @@ export function TodoList() {
 
   return(
     <div className={styles.content}>
-      <div className='styles.form' >
+      <div>
         <TodoForm onCreateTask={createTask}/>
       </div>
+
       <header className={styles.header}>
         <div className={styles.tasksCreated}>
           <p>Tarefas criadas</p>

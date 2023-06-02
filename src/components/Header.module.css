@@ -1,6 +1,7 @@
 .header {
   background: var(--gray-700);
 
+  min-width: 76.8rem;
   display: flex;
   justify-content: center;
   padding-top: 7.2rem;
